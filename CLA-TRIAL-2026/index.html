@@ -47,41 +47,44 @@
   <style>
     /* === HERO IMAGE OVERLAY STYLES === */
 
-    /* Establishes the boundary for the image */
     .hero {
-        position: relative;
-        overflow: hidden; /* keeps background contained */
+      position: relative;
+      overflow: hidden; /* keeps background contained */
     }
 
+    /* UPDATED hero-inner */
     .hero-inner {
-        position: relative;          /* text container on top of bg */
-        padding: 4rem 0;             /* adjust as needed for spacing */
-        z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50vh;
+      padding: 0 1.25rem;  /* space on mobile edges */
+      position: relative; 
+      z-index: 2;
     }
 
-    /* Makes the image the background layer */
+    /* Responsive hero background image */
     .hero-background-img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;           /* Fills the section without distortion */
-        z-index: 1;                  /* Behind the text */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
     }
 
-    /* Brings text to the front and improves readability */
+    /* UPDATED overlay text */
     .hero-overlay-text {
-        position: relative;
-        z-index: 3;                  /* On top of the image */
-        color: white !important;     /* Forces the text color to white */
-        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-        max-width: 38rem;            /* Keeps text width reasonable */
+      position: relative;
+      z-index: 3;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+      max-width: 38rem;
     }
 
-    /* Ensure paragraph text inside the hero is also white */
     .hero-overlay-text p {
-        color: white !important;
+      color: white;
     }
 
     /* === HOURS OF OPERATION STYLES === */
@@ -115,13 +118,23 @@
       font-weight: 600;
       color: var(--text);
     }
+
+    /* UPDATED cards layout */
+    .program-cards-container,
+    .review-cards-container {
+      display: flex;
+      justify-content: space-around;
+      padding: 40px 0;
+      flex-wrap: wrap;
+      gap: 1.5rem; /* consistent gap between cards */
+    }
   </style>
 </head>
 <body>
   <!-- Header / Navigation -->
   <header class="site-header">
     <div class="container header-inner">
-      <div class="logo">Chokelab BJJ Academy</div>
+      <div class="logo">Chokelab BRazilian Jiu-Jitsu Academy</div>
       <nav class="nav">
         <a href="#programs">Programs</a>
         <a href="#about">About</a>
@@ -134,6 +147,9 @@
   <!-- Hero -->
   <section class="hero" id="hero">
     <img
+      srcset="assets/images/top-rated-adult-martial-arts-new-jersey-mobile.jpg 480w,
+              assets/images/top-rated-adult-martial-arts-new-jersey.jpg 1120w"
+      sizes="(max-width: 640px) 480px, 1120px"
       src="assets/images/top-rated-adult-martial-arts-new-jersey.jpg"
       alt="Top rated adult martial arts team in New Jersey"
       class="hero-background-img">
