@@ -1,302 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>BJJ & Martial Arts | Kearny, Harrison NJ | Chokelab Academy</title>
+    <title>BJJ, Martial Arts School & Self-Defense Classes | Hudson County, NJ (Harrison, Kearny, Newark)</title>
+    
+    <meta name="description" content="Top-rated Brazilian Jiu-Jitsu (BJJ) and Martial Arts School offering Kids & Adults programs, including Self-Defense, Jiu Jitsu Gym training, Karate, Judo, and Striking classes near Harrison, Kearny & Newark, NJ." />
 
-  <meta name="description" content="Learn real-world self-defense & build confidence in our top-rated BJJ programs for Kids and Adults in Harrison & Kearny, NJ. Book your trial today!" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Chokelab Brazilian Jiu-Jitsu Academy",
-    "image": "https://clatrial.com/assets/images/logo.png",
-    "url": "https://clatrial.com/",
-    "telephone": "+1-973-445-7796",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "756 Harrison Ave",
-      "addressLocality": "Harrison",
-      "addressRegion": "NJ",
-      "postalCode": "07029"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "40.74790720968899",
-      "longitude": "-74.14817690849304"
-    },
-    "areaServed": [
-      "Kearny",
-      "Newark",
-      "North Arlington",
-      "East Newark"
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "493"
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Chokelab Brazilian Jiu-Jitsu Academy",
+      "image": "https://placehold.co/150x50/374151/ffffff?text=CHOKELAB",
+      "url": "https://clatrial.com/",
+      "telephone": "+1-973-445-7796",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "756 Harrison Ave",
+        "addressLocality": "Harrison",
+        "addressRegion": "NJ",
+        "postalCode": "07029"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "40.74790720968899",
+        "longitude": "-74.14817690849304"
+      },
+      "areaServed": [
+        "Kearny",
+        "Newark",
+        "North Arlington",
+        "East Newark"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "493"
+      }
     }
-  }
-  </script>
+    </script>
 
-  <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Font Configuration */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
 
-  <style>
-    /* === HERO IMAGE OVERLAY STYLES === */
+        /* Hero Background and Overlay */
+        .hero-bg {
+            position: relative;
+            min-height: 50vh; /* Ensures a good height on all devices */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1f2937; /* Fallback background color */
+        }
 
-    .hero {
-      position: relative;
-      overflow: hidden; /* keeps background contained */
-    }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            /* *** FIXED PATH: Removed the leading './' from the image URL *** */
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(37, 99, 235, 0.4)), url('assets/images/top-rated-adult-martial-arts-new-jersey.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
 
-    /* UPDATED hero-inner */
-    .hero-inner {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 50vh;
-      padding: 0 1.25rem;  /* space on mobile edges */
-      position: relative; 
-      z-index: 2;
-    }
-
-    /* Responsive hero background image */
-    .hero-background-img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 1;
-    }
-
-    /* UPDATED overlay text */
-    .hero-overlay-text {
-      position: relative;
-      z-index: 3;
-      color: white;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-      max-width: 38rem;
-    }
-
-    .hero-overlay-text p {
-      color: white;
-    }
-
-    /* === HOURS OF OPERATION STYLES === */
-    .hours-container {
-      margin-top: 1.5rem;
-      text-align: left;
-      max-width: 26rem;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .hours-container h3 {
-      margin-bottom: 0.5rem;
-    }
-
-    .hours-list {
-      list-style: none;
-      padding: 0;
-      margin-top: 10px;
-    }
-
-    .hours-list li {
-      padding: 4px 0;
-      border-bottom: 1px dotted var(--border);
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.95rem;
-    }
-
-    .hours-list li span {
-      font-weight: 600;
-      color: var(--text);
-    }
-
-    /* UPDATED cards layout */
-    .program-cards-container,
-    .review-cards-container {
-      display: flex;
-      justify-content: space-around;
-      padding: 40px 0;
-      flex-wrap: wrap;
-      gap: 1.5rem; /* consistent gap between cards */
-    }
-  </style>
+        /* Hours List Custom Styling for structure */
+        .hours-list li {
+            padding: 4px 0;
+            border-bottom: 1px dotted #d1d5db; /* gray-300 */
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.95rem;
+        }
+    </style>
 </head>
-<body>
-  <!-- Header / Navigation -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="logo">Chokelab BRazilian Jiu-Jitsu Academy</div>
-      <nav class="nav">
-        <a href="#programs">Programs</a>
-        <a href="#about">About</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#trial-form-section">Contact</a>
-      </nav>
-    </div>
-  </header>
+<body class="bg-gray-50 text-gray-800 antialiased">
 
-  <!-- Hero -->
-  <section class="hero" id="hero">
-    <img
-      srcset="assets/images/top-rated-adult-martial-arts-new-jersey-mobile.jpg 480w,
-              assets/images/top-rated-adult-martial-arts-new-jersey.jpg 1120w"
-      sizes="(max-width: 640px) 480px, 1120px"
-      src="assets/images/top-rated-adult-martial-arts-new-jersey.jpg"
-      alt="Top rated adult martial arts team in New Jersey"
-      class="hero-background-img">
+    <header class="bg-gray-900 text-white shadow-xl sticky top-0 z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#hero" class="flex items-center space-x-2">
+                <span class="text-2xl font-extrabold tracking-wider text-blue-600">CHOKELAB</span>
+                <span class="text-sm font-light text-gray-300 hidden md:inline">BJJ Academy</span>
+            </a>
+            
+            <nav class="space-x-4 md:space-x-8 text-sm md:text-base flex items-center">
+                <a href="#about" class="text-gray-300 hover:text-blue-500 transition duration-300">About Us</a>
+                <a href="#programs" class="text-gray-300 hover:text-blue-500 transition duration-300">Programs</a>
+                <a href="#reviews" class="text-gray-300 hover:text-blue-500 transition duration-300">Reviews</a>
+                <a href="#trial-form-section" class="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700 transition duration-300 font-bold shadow-md transform hover:scale-105">Book Trial</a>
+            </nav>
+        </div>
+    </header>
 
-    <div class="container hero-inner">
-      <div class="hero-text hero-overlay-text">
-        <h1>Learn Brazilian Jiu-Jitsu in Kearny & Harrison, NJ</h1>
-        <p>Build confidence and real-world self-defense skills with the most reviewed academy in New Jersey. All ages welcome.</p>
-        <a href="#trial-form-section" class="btn btn-primary">Book Your Trial Class</a>
-      </div>
-    </div>
-  </section>
+    <main>
+        <section class="hero-bg" id="hero">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 py-20 md:py-32">
+                <div class="max-w-4xl mx-auto text-white">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">
+                        Brazilian Jiu-Jitsu & Martial Arts School in Hudson County, NJ
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 font-light drop-shadow-md">
+                        Build confidence and real-world self-defense skills with the most reviewed academy in New Jersey. All ages welcome.
+                    </p>
+                    <a href="#trial-form-section" class="inline-block px-10 py-4 bg-blue-600 text-white text-lg md:text-xl font-extrabold rounded-full shadow-2xl hover:bg-blue-700 transition duration-300 transform hover:scale-105 uppercase tracking-wide border-4 border-white">
+                        Book Your Trial Class
+                    </a>
+                </div>
+            </div>
+        </section>
 
-  <!-- Programs -->
-  <section class="programs-section" id="programs">
-    <h2 class="section-title text-color-primary text-center">Our Premier Programs</h2>
-    <div class="program-cards-container">
-      <div class="program-card">
-        <h3>Adults Brazilian Jiu-Jitsu</h3>
-        <img
-          src="assets/images/top-rated-adult-martial-arts-harrison-nj..jpg"
-          alt="Adult student in a white gi training Brazilian Jiu-Jitsu at Chokelab Academy">
-        <p>Master the fundamentals of Jiu-Jitsu, get in the best shape of your life, and build real-world self-defense skills in our structured, friendly adult program.</p>
-        <a href="#trial-form-section" class="btn btn-solid btn-color-primary">Book Your Trial Class</a>
-      </div>
-      <div class="program-card">
-        <h3>Kids Brazilian Jiu-Jitsu</h3>
-        <img
-          src="assets/images/top-rated-kids-martial-arts-kearny-nj.jpg"
-          alt="Two youth students grappling in a white and blue gi during Kids BJJ class">
-        <p>Teach your child confidence, discipline, and respect while they learn bully-proof self-defense skills in a fun, safe, and positive environment.</p>
-        <a href="#trial-form-section" class="btn btn-solid btn-color-primary">Book Your Trial Class</a>
-      </div>
-    </div>
-  </section>
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" id="programs">
+            <h2 class="text-3xl font-bold text-center mb-10 border-b-4 border-blue-600 pb-2 inline-block mx-auto text-gray-900">Our Premier Programs</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 border border-gray-100 p-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-600">Adults Brazilian Jiu-Jitsu</h3>
+                    <img
+                        /* *** FIXED PATH: Removed the leading './' *** */
+                        src="assets/images/adults-bjj-instructors.jpg"
+                        alt="Adult Brazilian Jiu-Jitsu instructors and students in a group photo on the mats."
+                        class="w-full h-auto rounded-lg mb-4 object-cover">
+                    <p class="text-gray-600 mb-6">Master the fundamentals of Jiu-Jitsu, get in the best shape of your life, and build real-world self-defense skills in our structured, friendly adult program.</p>
+                    <a href="#trial-form-section" class="w-full inline-block text-center py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition duration-300">
+                        Book Your Trial Class
+                    </a>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 border border-gray-100 p-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-600">Kids Brazilian Jiu-Jitsu</h3>
+                    <img
+                        /* *** FIXED PATH: Removed the leading './' *** */
+                        src="assets/images/kids-bjj-medals.jpg"
+                        alt="Children in the kids martial arts program proudly displaying their BJJ competition medals."
+                        class="w-full h-auto rounded-lg mb-4 object-cover">
+                    <p class="text-gray-600 mb-6">Teach your child confidence, discipline, and respect while they learn bully-proof self-defense skills in a fun, safe, and positive environment.</p>
+                    <a href="#trial-form-section" class="w-full inline-block text-center py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition duration-300">
+                        Book Your Trial Class
+                    </a>
+                </div>
+            </div>
+        </section>
 
-  <!-- About / Instructor -->
-  <section class="about-section text-center" id="about">
-    <h2 class="section-title text-color-primary">About Chokelab Academy</h2>
-    <p>Chokelab Brazilian Jiu‑Jitsu Academy is dedicated to helping kids, teens, and adults grow on and off the mats. Training is focused on solid fundamentals, clean technique, and a positive culture where everyone works together.</p>
-    <p>Classes are designed so beginners feel comfortable on day one, while experienced students are constantly challenged to improve.</p>
-  </section>
+        <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center" id="about">
+            <h2 class="text-3xl font-bold text-center mb-6 border-b-4 border-blue-600 pb-2 inline-block mx-auto text-gray-900">About Chokelab Academy</h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+                Chokelab Brazilian Jiu-Jitsu Academy in **Harrison, NJ**, offers beginner-friendly BJJ classes for kids, teens, women, and adults. Led by Professor Josef Manuel, 4th-degree black belt under Robson Moura, our BJJ Gym teaches practical self-defense, builds confidence, and prepares students for competition at every level. Families from **Harrison, Kearny, Newark, and across Northern New Jersey** trust Chokelab for world-class martial arts training. We provide kids’ martial arts, women’s self-defense, karate, judo, striking classes, and advanced BJJ programs in a safe, supportive environment. Open late on weekdays and Saturdays. Call to schedule your trial class today and see why Chokelab is one of New Jersey’s top Brazilian Jiu-Jitsu schools.
+            </p>
+        </section>
 
-  <!-- Reviews -->
-  <section class="testimonials-section" id="reviews">
-    <h2 class="section-title text-color-primary text-center">Hear From Our Students</h2>
-    <div class="review-cards-container">
-      <div class="review-card">
-        <blockquote>
-          "I have trained in several schools. This one is by far the best of them all. Top notch in every category. From award wining instructor to how clean the environments is. He is patient and thorough..."
-        </blockquote>
-        <p class="review-author"><strong>— Speedy Guareno.</strong>, Adult BJJ Student</p>
-      </div>
-      <div class="review-card">
-        <blockquote>
-          "My son was part of the kids program at Chokelab Brazilian Jiu-Jitsu Academy, and he enjoyed every single class. The program not only focuses on personal defense but, more importantly, teaches discipline and respect..."
-        </blockquote>
-        <p class="review-author"><strong>— Alexander Montecinos</strong>, Parent of Kids BJJ Student</p>
-      </div>
-    </div>
-  </section>
+        <section class="bg-gray-100 py-16" id="reviews">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-10 border-b-4 border-blue-600 pb-2 inline-block mx-auto text-gray-900">Hear From Our Students (493+ 5-Star Reviews)</h2>
+                
+                <div class="grid sm:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500">
+                        <blockquote class="italic text-gray-700 mb-4">
+                            "I have trained in several schools. This one is by far the best of them all. Top notch in every category. From award wining instructor to how clean the environments is. He is patient and thorough..."
+                        </blockquote>
+                        <p class="review-author text-sm text-gray-900 font-semibold">— Speedy Guareno., <span class="text-blue-600">Adult BJJ Student</span></p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500">
+                        <blockquote class="italic text-gray-700 mb-4">
+                            "My son was part of the kids program at Chokelab Brazilian Jiu-Jitsu Academy, and he enjoyed every single class. The program not only focuses on personal defense but, more importantly, teaches discipline and respect..."
+                        </blockquote>
+                        <p class="review-author text-sm text-gray-900 font-semibold">— Alexander Montecinos, <span class="text-blue-600">Parent of Kids BJJ Student</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Contact / Free Trial Form -->
-  <section id="trial-form-section">
-    <form class="trial-form" method="POST" name="trial-class">
-      <!-- Honeypot field (hidden from real users) -->
-      <div style="display:none;">
-        <label>Don’t fill this out if you're human:
-          <input name="bot-field">
-        </label>
-      </div>
-      <!-- Required hidden form-name -->
-      <input type="hidden" name="form-name" value="trial-class">
-      <div class="form-group">
-        <label for="student-name">Your Full Name:</label>
-        <input type="text" id="student-name" name="name" placeholder="Enter full name" required>
-      </div>
-      <div class="form-group">
-        <label for="student-email">Your Email Address:</label>
-        <input type="email" id="student-email" name="email" placeholder="Enter email address" required>
-      </div>
-      <div class="form-group">
-        <label for="student-phone">Your Phone Number:</label>
-        <input type="tel" id="student-phone" name="phone" placeholder="Enter phone number" required>
-      </div>
-      <input type="submit" value="Book Your Trial Class" class="btn btn-solid btn-color-primary">
-    </form>
+        <section id="trial-form-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid lg:grid-cols-3 gap-12 items-start">
+                
+                <div class="lg:col-span-2 bg-white p-8 rounded-xl shadow-2xl border-t-8 border-blue-600">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-900">Book Your FREE Trial Class</h2>
+                    <form class="space-y-6" method="POST" name="trial-class">
+                        <div style="display:none;">
+                            <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+                        </div>
+                        <input type="hidden" name="form-name" value="trial-class">
+                        
+                        <div>
+                            <label for="student-name" class="block text-sm font-medium text-gray-700 mb-1">Your Full Name:</label>
+                            <input type="text" id="student-name" name="name" placeholder="Enter full name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="student-email" class="block text-sm font-medium text-gray-700 mb-1">Your Email Address:</label>
+                            <input type="email" id="student-email" name="email" placeholder="Enter email address" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="student-phone" class="block text-sm font-medium text-gray-700 mb-1">Your Phone Number:</label>
+                            <input type="tel" id="student-phone" name="phone" placeholder="Enter phone number" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        
+                        <input type="submit" value="Book Your Trial Class" class="w-full py-3 text-lg font-bold bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-300 shadow-xl uppercase cursor-pointer">
+                    </form>
+                </div>
 
-    <div class="location-details text-center">
-      <h3>📍 Our Harrison, NJ Location</h3>
-      <p><strong>Address:</strong> 756 Harrison Ave, Harrison, NJ 07029</p>
-      <p><strong>Phone:</strong> <a href="tel:+19734457796">+1 (973) 445-7796</a></p>
-      <p>
-        <a
-          href="https://maps.google.com/?cid=7864707294690634632&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
-          target="_blank"
-          class="btn btn-outline btn-color-secondary">
-          Get Directions
-        </a>
-      </p>
-    </div>
+                <div class="lg:col-span-1 space-y-8">
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-gray-400">
+                        <h3 class="text-xl font-bold mb-4 text-blue-600 flex items-center">📍 Our Harrison, NJ Location</h3>
+                        <p class="text-gray-700 mb-2"><strong>Address:</strong> 756 Harrison Ave, Harrison, NJ 07029</p>
+                        <p class="text-gray-700 mb-4"><strong>Phone:</strong> <a href="tel:+19734457796" class="text-blue-600 hover:text-blue-700">+1 (973) 445-7796</a></p>
+                        
+                        <a
+                            href="https://maps.google.com/?cid=7864707294690634632&g_mp=Cidnb29nbGUubWFwcy5plA==!3m2!1sen!2sus!4v1732500000000!5m2!1sen!2sus"
+                            target="_blank"
+                            class="inline-block px-4 py-2 mt-2 text-sm font-semibold text-blue-600 border border-blue-600 rounded-full hover:bg-blue-50 transition duration-300">
+                            Get Directions
+                        </a>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-gray-400">
+                        <h3 class="text-xl font-bold mb-4 text-blue-600 flex items-center">Hours of Operation 🕒</h3>
+                        <ul class="hours-list text-gray-700">
+                            <li><span>Monday</span> 5:30–9:30 PM</li>
+                            <li><span>Tuesday</span> 9:30–11:30 AM | 5:30–8:30 PM</li>
+                            <li><span>Wednesday</span> 5:30–9:30 PM</li>
+                            <li><span>Thursday</span> 9:30–11:30 AM | 5:30–8:30 PM</li>
+                            <li><span>Friday</span> 7:30–9:30 PM</li>
+                            <li><span>Saturday</span> 10:30 AM–12:30 PM</li>
+                            <li><span>Sunday</span> 9:30–11:30 AM</li>
+                        </ul>
+                    </div>
+                </div>
 
-    <div class="hours-container">
-      <h3>Hours of Operation 🕒</h3>
-      <ul class="hours-list">
-        <li><span>Monday</span> 5:30–9:30 PM</li>
-        <li><span>Tuesday</span> 9:30–11:30 AM | 5:30–8:30 PM</li>
-        <li><span>Wednesday</span> 5:30–9:30 PM</li>
-        <li><span>Thursday</span> 9:30–11:30 AM | 5:30–8:30 PM</li>
-        <li><span>Friday</span> 7:30–9:30 PM</li>
-        <li><span>Saturday</span> 10:30 AM–12:30 PM</li>
-        <li><span>Sunday</span> 9:30–11:30 AM</li>
-      </ul>
-    </div>
-  </section>
+            </div>
+        </section>
 
-  <!-- Map / Location -->
-  <section class="section" id="location">
-    <div class="container location-grid">
-      <div>
-        <h2 class="section-title">Visit Chokelab Academy</h2>
-        <p class="section-intro">Harrison, New Jersey</p>
-        <p>Located in Harrison, NJ, with easy access from nearby towns. Contact the academy for current class schedule and details.</p>
-      </div>
-      <div class="map-placeholder">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.6419360761!2d-74.15074742397255!3d40.74790377138823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25470a6c2dfd7%3A0x6d250d9d92756b88!2s756%20Harrison%20Ave%2C%20Harrison%2C%20NJ%2007029!5e0!3m2!1sen!2sus!4v1732500000000!5m2!1sen!2sus"
-          width="100%"
-          height="280"
-          style="border:0; border-radius: 8px;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-    </div>
-  </section>
+        <section class="bg-gray-900 py-16" id="location">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-10 text-white border-b-4 border-blue-600 pb-2 inline-block mx-auto">Find Us Easily</h2>
+                <div class="map-placeholder bg-gray-700 rounded-xl shadow-2xl overflow-hidden">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.6419360761!2d-74.15074742397255!3d40.74790377138823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25470a6c2dfd7%3A0x6d250d9d92756b88!2s756%20Harrison%20Ave%2C%20Harrison%2C%20NJ%2007029!5e0!3m2!1sen!2sus!4v1732500000000!5m2!1sen!2sus"
+                        width="100%"
+                        height="400"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Google Maps Location of Chokelab Brazilian Jiu-Jitsu Academy">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> Chokelab Brazilian Jiu-Jitsu Academy. All rights reserved.</p>
-    </div>
-  </footer>
+    <footer class="bg-gray-900 text-white py-6 border-t border-blue-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>© <span id="year"></span> Chokelab Brazilian Jiu-Jitsu Academy. All rights reserved.</p>
+        </div>
+    </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+    <script>
+        // Set the current year for the copyright notice
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
